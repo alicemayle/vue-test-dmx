@@ -61,6 +61,8 @@ export default {
   justify-items: center;
   padding-left: 30%;
   padding-right: 30%;
+  padding-top: 10%;
+  border: 0;
 }
 .form {
   display: flex;
