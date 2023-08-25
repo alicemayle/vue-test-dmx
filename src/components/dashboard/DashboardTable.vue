@@ -1,6 +1,12 @@
 <template>
   <div class="div-table">
-    <b-table borderless :fields="fields" :items="items" responsive="sm">
+    <b-table
+      borderless
+      :fields="fields"
+      :items="items"
+      responsive="sm"
+      :filter="filter"
+    >
       <!--default data cell-->
       <template #cell()="data">
         <p>{{ data.value }}</p>
@@ -57,6 +63,7 @@ export default {
   setup() {
     const store = useStore();
     const items = computed(() => store.state.user.tests);
+    const filter = computed(() => store.state.filter);
     const fields = [
       "fecha",
       "nombre",
@@ -88,6 +95,7 @@ export default {
       items,
       fields,
       onClickDetails,
+      filter,
     };
   },
 };

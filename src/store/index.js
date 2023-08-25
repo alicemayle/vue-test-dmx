@@ -16,7 +16,8 @@ export default createStore({
     },
     tabActive: 'all',
     showModal: false,
-    testDetails: {}
+    testDetails: {},
+    filter: ''
   },
   getters: {
   },
@@ -38,7 +39,10 @@ export default createStore({
     },
     setTestDetails(state, payload) {
       state.testDetails = payload
-    }
+    },
+    setFilter(state, payload) {
+      state.filter = payload
+    },
   },
   actions: {
     setState({ commit }, params) {
@@ -52,7 +56,7 @@ export default createStore({
         const items = [
           {
             id: 1,
-            fecha: "05/07/2023",
+            fecha: "06/08/2023",
             nombre: "Ana Laura Rodriguez Leal",
             celular: "+52 81 4490 7578",
             progreso: { proceso: "Oferta comercial", avance: "100" },
@@ -60,27 +64,27 @@ export default createStore({
           },
           {
             id: 2,
-            fecha: "05/07/2023",
-            nombre: "Ana Laura Rodriguez Leal",
-            celular: "+52 81 4490 7578",
-            progreso: { proceso: "Oferta comercial", avance: "45" },
-            estatus: "error",
-          },
-          {
-            id: 3,
-            fecha: "05/07/2023",
-            nombre: "Ana Laura Rodriguez Leal",
-            celular: "+52 81 4490 7578",
-            progreso: { proceso: "Oferta comercial", avance: "23" },
+            fecha: "01/08/2023",
+            nombre: "Juan Lorenzo Elizondo",
+            celular: "+52 81 2589 2479",
+            progreso: { proceso: "Buró de credito", avance: "23" },
             estatus: "dont-accept",
           },
           {
-            id: 4,
-            fecha: "05/07/2023",
-            nombre: "Ana Laura Rodriguez Leal",
-            celular: "+52 81 4490 7578",
-            progreso: { proceso: "Oferta comercial", avance: "64" },
+            id: 3,
+            fecha: "30/07/2023",
+            nombre: "María Eugenia Rodríguez Rondón",
+            celular: "+52 81 8576 7894",
+            progreso: { proceso: "Autorización buró", avance: "64" },
             estatus: "incompleted",
+          },
+          {
+            id: 4,
+            fecha: "15/07/2023",
+            nombre: "Ana Sofía Cruz Hernández",
+            celular: "+52 81 2589 6754",
+            progreso: { proceso: "Perfilamiento", avance: "45" },
+            estatus: "error",
           },
         ];
 

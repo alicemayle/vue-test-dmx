@@ -123,7 +123,6 @@ export default {
     const store = useStore();
     const showModal = computed(() => store.state.showModal);
     const testDetails = computed(() => store.state.testDetails);
-    console.log("modal " + testDetails);
 
     const onShowModal = () => {
       store.dispatch("setState", {

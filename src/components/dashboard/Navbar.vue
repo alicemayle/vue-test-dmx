@@ -15,26 +15,35 @@
     <b-navbar-nav class="ml-auto">
       <div class="row-center">
         <div class="avatar"></div>
-        <b-nav-item-dropdown right>
-          <!-- Using 'button-content' slot -->
-          <template #button-content>
-            <em>{{ user.name }}<br />Admin </em>
-          </template>
-        </b-nav-item-dropdown>
+        <b-button size="sm" variant="light" class="button-log-out">
+          <div class="row-center">
+            <p>
+              <strong>{{ user.name }}</strong
+              ><br /><em>Admin</em>
+            </p>
+            <b-icon icon="chevron-down"></b-icon>
+          </div>
+        </b-button>
       </div>
     </b-navbar-nav>
   </b-navbar>
 </template>
 
 <script>
+import { useRouter } from "vue-router";
 import { useStore } from "vuex";
 export default {
   name: "Navbar",
 
   setup() {
     const store = useStore();
+    const router = useRouter();
 
-    return { user: store.state.user };
+    const logOutSubmit = () => {
+      router.push("/");
+    };
+
+    return { user: store.state.user, logOutSubmit };
   },
 };
 </script>
@@ -53,6 +62,7 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
+  align-content: center;
 }
 .button {
   color: grey;
@@ -73,5 +83,11 @@ export default {
   width: 30px;
   border-radius: 30px;
   margin-right: 10px;
+}
+.button-log-out {
+  /* background-color: #fff; */
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 </style>
