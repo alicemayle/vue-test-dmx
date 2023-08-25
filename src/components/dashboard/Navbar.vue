@@ -85,7 +85,7 @@ export default {
   margin-right: 10px;
 }
 .button-log-out {
-  /* background-color: #fff; */
+  background-color: #fff;
   border: 0;
   margin: 0;
   padding: 0;
