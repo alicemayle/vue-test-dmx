@@ -6,6 +6,7 @@
       :items="items"
       responsive="sm"
       :filter="filter"
+      :filter-included-fields="['celular']"
     >
       <!--default data cell-->
       <template #cell()="data">
