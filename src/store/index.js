@@ -97,11 +97,22 @@ export default createStore({
         const item =
           {
             id: param.id,
-            fecha: "05/07/2023",
+            fecha: "28/08/1985",
+            rfc: "VISA79040283TA",
             nombre: param.nombre,
-            celular: "+52 81 4490 7578",
-            progreso: { proceso: "Oferta comercial", avance: "100" },
+            celular: param.celular,
+            correo: "maria.eugenia@gmail.com",
+            direccion: "Calle Rio Lena 2018, Riberas de Dos Rios, Guadalupe, C.P. 64628",
+            progreso: param.progreso,
             estatus: param.estatus,
+            producto: "Electrónico",
+            subproducto: "IMSS",
+            tipoNomina: "Jubilado",
+            operacion: "Crédito Nuevo",
+            estado: "Nuevo León",
+            banco: "Banorte",
+            sucursal: "Sucursal Escobedo",
+            promotor: "Pamela Cheves García (81 10375 28740)"
           };
 
         commit("setTestDetails", item);

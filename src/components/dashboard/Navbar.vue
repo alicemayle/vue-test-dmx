@@ -1,7 +1,7 @@
 <template>
-  <b-navbar toggleable class="navbar">
+  <b-navbar fixed="top" toggleable sticky class="navbar">
     <b-navbar-brand href="#">
-      <img src="../../assets/dimex.png" alt="Dimex" class="logo" />
+      <img src="../../assets/logo.jpeg" alt="Dimex" class="logo" />
     </b-navbar-brand>
 
     <div class="row-center">
@@ -47,7 +47,7 @@ export default {
   background-color: #fff;
 }
 .logo {
-  height: 90px;
+  height: 40px;
 }
 .row-center {
   display: flex;
